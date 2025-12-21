@@ -1,0 +1,110 @@
+/* ---------- Base ---------- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
+a{color:inherit}
+header{width:100%;padding:15px 25px;display:flex;justify-content:space-between;align-items:center;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:10}
+.logo{font-size:22px;font-weight:700}
+nav{display:flex;gap:20px;align-items:center}
+nav a{ text-decoration:none;color:#222;font-weight:500}
+nav a:hover{color:#ffcc00}
+/* nav a {
+  position: relative;
+  transition: 0.4s;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #ffb400;
+  transition: all 0.4s;
+}
+
+nav a:hover::before {
+  width: 100%;
+  left: 0;
+} */
+.book-btn:hover{color: #fff;}
+.book-btn{background:#ffb400;padding:8px 14px;border-radius:6px;color:#000;display:flex;gap:8px;align-items:center}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:25px;height:3px;background:#222}
+
+/* ---------- Hero ---------- */
+.hero{width:100%;height:70vh;position:relative;overflow:hidden}
+.hero-slider img{width:100%;height:100%;object-fit:cover;position:absolute;opacity:0;transition:0.6s}
+.hero-slider .active{opacity:1}
+.hero-content{position:absolute;bottom:20%;left:10%;color:#fff;max-width:760px}
+.hero-content h1{font-size:48px;font-weight:700;margin-bottom:8px;text-shadow:0 4px 18px rgba(0,0,0,0.45)}
+.hero-content p{margin:10px 0;font-size:18px;text-shadow:0 3px 12px rgba(0,0,0,0.35)}
+.hero-btn{background:#ffb400;padding:12px 20px;border-radius:8px;color:#000;text-decoration:none;font-weight:700;margin-top:18px;display:inline-block}
+
+/* ---------- Booking ---------- */
+.booking{max-width:900px;margin:50px auto;padding:20px;text-align:center}
+.booking-form{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;background:#fff;padding:25px;border-radius:12px;box-shadow:0 6px 24px rgba(6,8,15,0.06)}
+.form-group{display:flex;flex-direction:column;text-align:left}
+.form-group label{font-size:14px;margin-bottom:6px;color:#333}
+.form-group input,.form-group select{padding:12px;border-radius:8px;border:1px solid #e6e6e6}
+.book-submit{grid-column:span 2;padding:15px;background:#ffb400;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer}
+
+/* ---------- Sections & Grids ---------- */
+.services,.why-choose,.testimonials,.popular-routes{max-width:1100px;margin:50px auto;text-align:center;padding:20px}
+.services-title,.why-title,.testimonials-title,.routes-title, .booking-title{font-size:32px;font-weight:700;margin-bottom:30px}
+.services-container,.testimonial-container,.routes-container,.why-container{display:grid;gap:25px;grid-template-columns:repeat(4,1fr)}
+.service-box,.testimonial-box,.route-box,.why-box{background:#fff;padding:25px;border-radius:15px;box-shadow:0 8px 30px rgba(12,12,12,0.04);transition:transform .28s ease,box-shadow .28s ease;text-align:center}
+.service-box:hover,.route-box:hover,.why-box:hover,.testimonial-box:hover{transform:translateY(-6px);box-shadow:0 16px 45px rgba(12,12,12,0.08)}
+.service-icon{display:inline-flex;align-items:center;justify-content:center;width:76px;height:76px;border-radius:18px;background:linear-gradient(180deg,#fff,#f6f6f6);margin:0 auto 14px;font-size:32px;color:#ff8c00}
+.service-box h3,.why-box h3{font-size:20px;margin-bottom:10px}
+.service-box p,.why-box p,.testimonial-box p,.route-box p{font-size:15px;color:#555}
+
+/* ---------- Testimonials ---------- */
+.testimonial-container{grid-template-columns:repeat(3,1fr)}
+.testimonial-box img{width:65px;height:65px;border-radius:50%;object-fit:cover;margin-bottom:12px}
+.testimonial-box h4{font-size:18px;font-weight:700;margin-top:10px}
+.stars{color:#ffb300;margin:8px 0;font-size:18px}
+
+/* ---------- Routes ---------- */
+.routes-container{grid-template-columns:repeat(4,1fr)}
+.route-box img{width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:12px}
+.route-pin{font-size:20px;color:#ff8c00;margin-bottom:8px}
+.route-box a{text-decoration: none; color: inherit;}
+/* .route-box a h3{color: #000;} */
+
+
+/* ---------- Blogs ---------- */
+.blogs-section{padding:50px 20px;max-width:1100px;margin:40px auto}
+.blogs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.blog-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(6,8,15,0.04);transition:transform .28s,box-shadow .28s}
+.blog-card img{width:100%;height:180px;object-fit:cover}
+.blog-card .content{padding:16px}
+.blog-card h3{font-size:18px;margin-bottom:8px}
+.blog-card p{color:#555;font-size:14px;margin-bottom:12px}
+.blog-btn{background:#ffb400;color:#000;padding:8px 14px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-block}
+
+/* ---------- Counters ---------- */
+.counters{display:flex;justify-content:center;gap:40px;padding:50px 20px;background:#f7f7f7;margin-top:40px;flex-wrap:wrap}
+.counter-box{text-align:center}
+.counter{font-size:40px;font-weight:700;color:#ffb300}
+.counter-icon{display:block;font-size:28px;margin-bottom:8px;color:#ff8c00}
+
+/* ---------- Footer ---------- */
+.footer{background:#0b0b0b;color:#fff;padding:50px 20px;margin-top:40px}
+.footer-bottom { text-align:center; padding:15px; border-top:1px solid #444; margin-top:20px; font-size:14px; color:#bbb; }
+.footer-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+.footer h3{color:#ffcc00;margin-bottom:10px}
+.footer-col p,a{color:#d1d5db}
+.social-icons a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:transparent;color:#fff;margin-right:10px;font-size:18px;transition:all .18s}
+.social-icons a:hover{background:#111;color:#ffcc00}
+
+/* ---------- Floating Buttons ---------- */
+.floating-btns{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:12px;z-index:999}
+.float-btn{width:54px;height:54px;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:22px;color:#fff;text-decoration:none;box-shadow:0 8px 30px rgba(2,6,23,0.2)}
+.whatsapp-btn{background:linear-gradient(135deg,#25d366,#0aa35a)}
+.call-btn{background:linear-gradient(135deg,#007bff,#0062d6)}
+
+/* ---------- Helpers / Responsive ---------- */
+.icon-large{font-size:30px}
+@media(max-width:992px){.routes-container,.services-container,.testimonial-container,.why-container{grid-template-columns:repeat(2,1fr)}.blogs-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){nav{position:absolute;top:70px;right:0;width:100%;background:#fff;flex-direction:column;gap:15px;padding:20px;display:none}nav.show{display:flex}.hamburger{display:flex}.hero{height:50vh}.hero-content h1{font-size:30px}.blogs-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.routes-container,.services-container,.testimonial-container,.why-container{grid-template-columns:1fr}.booking-form{grid-template-columns:1fr}.book-submit{grid-column:span 1}}
